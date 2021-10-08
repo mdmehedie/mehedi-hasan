@@ -11,8 +11,8 @@
     --hue-color: 250;
 
     /* HLS Color Mode  */
-    --first-colo: hsl(var(--hue-color), 69%, 61%);
-    --first-colo-second: hsl(var(--hue-color), 69%, 61%);
+    --first-color: hsl(var(--hue-color), 69%, 61%);
+    --first-color-second: hsl(var(--hue-color), 69%, 61%);
     --first-color-alt: hsl(var(--hue-color), 57%, 53%);
     --first-color-lighter: hsl(var(--hue-color), 92%, 85%);
     --title-color: hsl(var(--hue-color), 8%, 15%);
@@ -111,7 +111,9 @@ img{
     height: auto;
 }
 
-
+.grid{
+    display: grid;
+}
 /* ==================== RESABLE CSS CLASS ============== */
 .section{
     padding: 2rem 0 4rem;
@@ -143,3 +145,209 @@ img{
     display: grid;
     gap: 1.5rem;
 }
+
+.header{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: var(--z-fixed);
+    background-color: var(--body-color);
+}
+
+
+/* =============== NAV ================= */
+
+
+.nav{
+    max-width: 968px;
+    display: flex;
+    height: var(--header-height);
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav_logo, .nav_toggle{
+    color: var(--title-color);
+    font-weight: var(--font-medium);
+}
+
+.nav_logo:hover{
+    color: var(--first-color);
+}
+
+.nav_toggle{
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+.nav_toggle:hover{
+    color: var(--first-color);
+}
+
+@media screen and (max-width: 767px) {
+    .nav_menu{
+        position: fixed;
+        bottom: -100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--body-color);
+        padding: 2rem 1.4rem 4rem;
+        box-shadow: 0 -1px 4px rgba(0,0,0,.15);
+        border-radius: 1.5rem 1.5rem 0 0;
+        transition: .3s;
+    }
+}
+
+.nav_list{
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.nav_link{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: var(--small-font-size);
+    color: var(--title-color);
+    font-weight: var(--font-medium);
+}
+
+.nav_link:hover{
+    color: var(--first-color);
+}
+
+.nav_icon{
+    font-size: 1.2rem;
+}
+
+.nav_close{
+    position: absolute;
+    right: 1.3rem;
+    bottom: .5rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--first-color);
+}
+.nav_close:hover{
+    color: var(--first-color-alt);
+}
+
+/* SHow menu */
+.show-menu{
+    bottom: 0;
+}
+
+/* Active Link  */
+
+/* Change Background header  */
+
+
+
+/* ====================== Home Scection ============ */
+.home_container{
+    gap: 1rem;
+}
+.home_content{
+    grid-template-columns: .5fr 3fr;
+    padding-top: 3.5rem;
+    align-items: center;
+}
+.home_social{
+    display: grid;
+    grid-template-columns: max-content;
+    row-gap: 1rem;
+}
+.home_social-icon{
+    font-size: 1.25rem;
+    color: var(--first-color);
+}
+.home_social-icon:hover{
+    color: var(--first-color-alt);
+}
+.home_blob{
+    width: 200px;
+    fill: #c4c4c4;
+}
+.home_blob-img{
+    width: 195px;
+}
+.home_data{
+    grid-column: 1/3;
+}
+.home_title{
+    font-size: var(--big-font-size);
+}
+.home_subtitle{
+    font-size: var(--h3-font-size);
+    color: var(--text-color);
+    font-weight: var(--font-medium);
+    margin-bottom: var(--mb-0-75);
+}
+.home_description{
+    margin-bottom: var(--mb-2);
+}
+
+.home_scroll{
+    display: none;
+}
+.home_social-button{
+    color: var(--first-color);
+    transition: .3s;
+}
+.home_scroll-button:hover{
+    transform: translate(.35rem);
+}
+.home_scroll-mouse{
+    font-size: 2rem;
+}
+.home_scroll-name{
+    font-size: var(--small-font-size);
+    color: var(--title-color);
+    font-weight: var(--font-medium);
+    margin-right: var(--mb-0-25);
+}
+.home_scroll-arrow{
+    font-size: 1.25rem;
+}
+
+/* ============ BUTTONS ============= */
+.button{
+    display: inline-block;
+    background-color: var(--first-color);
+    color: white;
+    padding: .8rem 1rem;
+    border-radius: .5rem;
+    font-weight: var(--font-medium);
+}
+.button:hover{
+    background-color: var(--first-color-alt);
+}
+.button_icon{
+    font-size: 1.25rem;
+    margin-left: var(--mb-0-5);
+    transition: .3s;
+}
+.button--flex{
+    display: inline-flex;
+    align-items: center;
+}
+
+/* ============= ABOUT ================== */
+.about_img{
+    width: 200px;
+    border-radius: .5rem;
+    justify-self: center;
+    align-items: center;
+}
+.about_description{
+    text-align: center;
+    margin-bottom: var(--mb-0-5);
+}
+.about_info{
+    display: flex;
+}
+/* ============== SKILLS =============== */
+
+/* ================ QUALIFICATION =============== */
+
+/* ============= SERVICES ================= */
