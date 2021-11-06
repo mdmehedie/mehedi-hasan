@@ -467,6 +467,18 @@ img{
     display: block;
     background-color: var(--first-color);
 }
+.skills_xd{
+    width: 95%;
+}
+.skills_figma{
+    width: 80%;
+}
+.skills_prototyping{
+    width: 90%;
+}
+.skills_balsamiq{
+    width: 85%;
+}
 .skills_html{
     width: 90%;
 }
@@ -696,7 +708,6 @@ img{
     outline: none;
 }
 .design{
-    margin-top: 2rem;
     padding: .2rem 1rem;
     grid-template-columns: repeat(2, 1fr);
 }
