@@ -85,6 +85,9 @@ modalCloses.forEach((modalClose) => {
     })
 })
 
+
+
+
 // =========== SWIPER SLIDE ==========
 let swiper = new Swiper(".portfolio_swiper", {
     cssMode: true,
@@ -98,7 +101,9 @@ let swiper = new Swiper(".portfolio_swiper", {
       el: ".swiper-pagination",
       clicable: true,
     },
-  });
+});
+
+
 
 //   ============ TESTIMONIAL =============
 let swiperTestimonial = new Swiper(".testimonialSwiper", {
